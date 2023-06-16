@@ -12,29 +12,36 @@ class TasksScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-            context: context,
-            builder: (context) => SingleChildScrollView(
-              child: Container(
-                padding: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).viewInsets.bottom),
-                child: AddList(),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(25.0),
               ),
             ),
+            context: context,
+            builder: (context) => Container(
+                padding: EdgeInsets.only(
+                  top: 40,
+                  left: 30,
+                  right: 30,
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
+                ),
+                child: const AddList()),
           );
         },
-        backgroundColor: Color(0xff81A1C1),
-        child: Icon(Icons.add),
+        backgroundColor: const Color(0xff81A1C1),
+        child: const Icon(Icons.add),
       ),
-      backgroundColor: Color(0xff81A1C1),
+      backgroundColor: const Color(0xff81A1C1),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.only(top: 100, right: 50, left: 50, bottom: 30),
+            padding: const EdgeInsets.only(
+                top: 100, right: 50, left: 50, bottom: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 35,
                   backgroundColor: Color(0xffE5E9F0),
                   child: Icon(
@@ -43,10 +50,10 @@ class TasksScreen extends StatelessWidget {
                     color: Color(0xff81A1C1),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Todey",
                   style: TextStyle(
                     color: Color(0xff4C566A),
@@ -54,10 +61,10 @@ class TasksScreen extends StatelessWidget {
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   '21 tasks',
                   style: TextStyle(
                     color: Color(0xffE5E9F0),
@@ -70,9 +77,9 @@ class TasksScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 50),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: TaskList(),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xffE5E9F0),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
