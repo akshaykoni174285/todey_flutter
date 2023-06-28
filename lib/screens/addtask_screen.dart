@@ -29,11 +29,11 @@ class AddList extends StatelessWidget {
           height: 10,
         ),
         ElevatedButton(
-          onPressed: () {},
           child: Container(
             color: Colors.blueAccent,
             child: Text("Add this task"),
           ),
+          onPressed: () {},
         ),
         SizedBox(
           height: 20,
