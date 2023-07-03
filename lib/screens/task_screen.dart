@@ -18,14 +18,15 @@ class TasksScreen extends StatelessWidget {
               ),
             ),
             context: context,
-            builder: (context) => Container(
-                padding: EdgeInsets.only(
-                  top: 40,
-                  left: 30,
-                  right: 30,
-                  bottom: MediaQuery.of(context).viewInsets.bottom,
-                ),
-                child: const AddList()),
+            isScrollControlled: true,
+            builder: (context) => Padding(
+              padding: EdgeInsets.only(
+                  top: 20.0,
+                  right: 20.0,
+                  left: 20.0,
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
+              child: const AddList(),
+            ),
           );
         },
         backgroundColor: const Color(0xff81A1C1),

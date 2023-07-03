@@ -6,13 +6,16 @@ class AddList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          "New Task",
-          style: TextStyle(
-            color: Colors.blueAccent[100],
-            fontSize: 40,
+        Center(
+          child: Text(
+            "New Task",
+            style: TextStyle(
+              color: Colors.blueAccent[100],
+              fontSize: 40,
+            ),
           ),
         ),
         TextField(
